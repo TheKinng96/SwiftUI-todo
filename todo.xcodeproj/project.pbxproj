@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B28FCC9628804F2700063004 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B28FCC9528804F2700063004 /* Constants.swift */; };
 		B2E99AC8287DA77800DAB27E /* todoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E99AC7287DA77800DAB27E /* todoApp.swift */; };
 		B2E99ACA287DA77800DAB27E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E99AC9287DA77800DAB27E /* ContentView.swift */; };
 		B2E99ACC287DA77800DAB27E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B2E99ACB287DA77800DAB27E /* Assets.xcassets */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B28FCC9528804F2700063004 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		B2E99AC4287DA77800DAB27E /* todo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = todo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2E99AC7287DA77800DAB27E /* todoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = todoApp.swift; sourceTree = "<group>"; };
 		B2E99AC9287DA77800DAB27E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -113,6 +115,7 @@
 		B2E99AE3287DA86600DAB27E /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				B28FCC9528804F2700063004 /* Constants.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -213,6 +216,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B28FCC9628804F2700063004 /* Constants.swift in Sources */,
 				B2E99AD1287DA77800DAB27E /* Persistence.swift in Sources */,
 				B2E99ACA287DA77800DAB27E /* ContentView.swift in Sources */,
 				B2E99AC8287DA77800DAB27E /* todoApp.swift in Sources */,
