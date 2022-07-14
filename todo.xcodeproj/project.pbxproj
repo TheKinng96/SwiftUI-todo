@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		B28FCC9628804F2700063004 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B28FCC9528804F2700063004 /* Constants.swift */; };
+		B28FCC98288053F600063004 /* HideKeyboardExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B28FCC97288053F600063004 /* HideKeyboardExtension.swift */; };
 		B2E99AC8287DA77800DAB27E /* todoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E99AC7287DA77800DAB27E /* todoApp.swift */; };
 		B2E99ACA287DA77800DAB27E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E99AC9287DA77800DAB27E /* ContentView.swift */; };
 		B2E99ACC287DA77800DAB27E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B2E99ACB287DA77800DAB27E /* Assets.xcassets */; };
@@ -21,6 +22,7 @@
 
 /* Begin PBXFileReference section */
 		B28FCC9528804F2700063004 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		B28FCC97288053F600063004 /* HideKeyboardExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HideKeyboardExtension.swift; sourceTree = "<group>"; };
 		B2E99AC4287DA77800DAB27E /* todo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = todo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2E99AC7287DA77800DAB27E /* todoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = todoApp.swift; sourceTree = "<group>"; };
 		B2E99AC9287DA77800DAB27E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -123,6 +125,7 @@
 		B2E99AE4287DA86B00DAB27E /* Extentions */ = {
 			isa = PBXGroup;
 			children = (
+				B28FCC97288053F600063004 /* HideKeyboardExtension.swift */,
 			);
 			path = Extentions;
 			sourceTree = "<group>";
@@ -218,6 +221,7 @@
 			files = (
 				B28FCC9628804F2700063004 /* Constants.swift in Sources */,
 				B2E99AD1287DA77800DAB27E /* Persistence.swift in Sources */,
+				B28FCC98288053F600063004 /* HideKeyboardExtension.swift in Sources */,
 				B2E99ACA287DA77800DAB27E /* ContentView.swift in Sources */,
 				B2E99AC8287DA77800DAB27E /* todoApp.swift in Sources */,
 				B2E99AD4287DA77800DAB27E /* todo.xcdatamodeld in Sources */,
