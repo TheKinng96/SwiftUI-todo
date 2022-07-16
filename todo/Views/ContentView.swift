@@ -10,35 +10,13 @@ import CoreData
 
 struct ContentView: View {
   @State private var task = ""
-  
-  private var isButtonDisabled: Bool {
-    task.isEmpty
-  }
-  
+  @State private var showAddTaskModal = false
   @Environment(\.managedObjectContext) private var viewContext
   
   @FetchRequest(
     sortDescriptors: [NSSortDescriptor(keyPath: \Item.timestamp, ascending: true)],
     animation: .default)
   private var items: FetchedResults<Item>
-  
-  private func addItem() {
-    withAnimation {
-      let newItem = Item(context: viewContext)
-      newItem.timestamp = Date()
-      newItem.completed = false
-      newItem.task = task
-      newItem.id = UUID()
-      do {
-        try viewContext.save()
-      } catch {
-        let nsError = error as NSError
-        fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
-      }
-      task = ""
-      hideKeyboard()
-    }
-  }
   
   private func deleteItems(offsets: IndexSet) {
     withAnimation {
@@ -57,32 +35,24 @@ struct ContentView: View {
     NavigationView {
       ZStack {
         VStack {
-          VStack(spacing: 10) {
-            TextField("Task", text: $task)
-              .padding()
-              .background(
-                Color(UIColor.systemGray6)
-              )
-              .cornerRadius(10)
-            
-            Button(action: {
-              addItem()
-            }, label: {
-              Spacer()
-              Text("save")
-              Spacer()
-            })
-            .disabled(isButtonDisabled)
-            .font(.headline)
-            .padding()
-            .foregroundColor(.white)
-            .background(
-              isButtonDisabled ? Color.gray : Color.pink
-            )
-            .cornerRadius(10)
-
-          }
-          .padding()
+          Spacer(minLength: 80)
+          
+          Button(action: {
+            showAddTaskModal = true
+          }, label: {
+            Image(systemName: "plus.circle")
+              .font(.system(size: 30, weight: .bold, design: .rounded))
+            Text("New Task")
+              .font(.system(size: 24, weight: .bold, design: .rounded))
+          })
+          .foregroundColor(.white)
+          .padding(.horizontal, 20)
+          .padding(.vertical, 15)
+          .background(
+            LinearGradient(gradient: Gradient(colors: [.red, .blue]), startPoint: .leading, endPoint: .trailing)
+          )
+          .clipShape(Capsule())
+          .shadow(color: Color(red: 0, green: 0, blue: 0, opacity: 0.65), radius: 16, x: 0, y: 4)
           
           List {
             ForEach(items) { item in
@@ -103,6 +73,17 @@ struct ContentView: View {
           .padding(.vertical, 0)
           .frame(maxWidth: 640)
         } //: VSTACK
+        
+        if showAddTaskModal {
+          BlankView()
+            .onTapGesture {
+              withAnimation() {
+                showAddTaskModal = false
+              }
+            }
+          TaskItemView(isShowing: $showAddTaskModal)
+        }
+        
       } //: ZSTACK
       .onAppear() {
         UITableView.appearance().backgroundColor = .clear
