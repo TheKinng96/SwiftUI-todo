@@ -9,6 +9,7 @@ import SwiftUI
 import CoreData
 
 struct ContentView: View {
+  @AppStorage("isDarkMode") private var isDarkMode: Bool = false
   @State private var task = ""
   @State private var showAddTaskModal = false
   @Environment(\.managedObjectContext) private var viewContext
@@ -35,6 +36,33 @@ struct ContentView: View {
     NavigationView {
       ZStack {
         VStack {
+          HStack {
+            Text("Devote")
+              .font(.system(size: 30, weight: .bold, design: .rounded))
+            
+            Spacer()
+            
+            EditButton()
+              .font(.system(size: 16, weight: .semibold, design: .rounded))
+              .padding(.horizontal, 10)
+              .frame(minWidth: 70, minHeight: 24)
+              .background(
+                Capsule().stroke(lineWidth: 2)
+              )
+            
+            Button(action: {
+              isDarkMode.toggle()
+            }, label: {
+              Image(systemName: isDarkMode ? "moon.circle.fill" : "moon.circle")
+                .resizable()
+                .frame(width: 24, height: 24)
+                .font(.system(.title, design: .rounded))
+            })
+            
+          }
+          .padding()
+          .foregroundColor(.white)
+          
           Spacer(minLength: 80)
           
           Button(action: {
@@ -90,11 +118,7 @@ struct ContentView: View {
       }
       .navigationTitle("Daily Task")
       .navigationBarTitleDisplayMode(.large)
-      .toolbar {
-        ToolbarItem(placement: .navigationBarTrailing) {
-          EditButton()
-        }
-      }//: TOOLBAR
+      .navigationBarHidden(true)
       .background(
         BackgroundImageView()
       )
