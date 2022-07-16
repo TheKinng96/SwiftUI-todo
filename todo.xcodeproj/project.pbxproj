@@ -14,6 +14,7 @@
 		B2C58A042882364E0046D55D /* BlankView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C58A032882364E0046D55D /* BlankView.swift */; };
 		B2C58A06288246EB0046D55D /* ListRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C58A05288246EB0046D55D /* ListRowView.swift */; };
 		B2C58A08288297C70046D55D /* CheckboxStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C58A07288297C70046D55D /* CheckboxStyle.swift */; };
+		B2C58A0A2882E6820046D55D /* SoundPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C58A092882E6820046D55D /* SoundPlayer.swift */; };
 		B2E99AC8287DA77800DAB27E /* todoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E99AC7287DA77800DAB27E /* todoApp.swift */; };
 		B2E99ACA287DA77800DAB27E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E99AC9287DA77800DAB27E /* ContentView.swift */; };
 		B2E99ACC287DA77800DAB27E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B2E99ACB287DA77800DAB27E /* Assets.xcassets */; };
@@ -33,6 +34,7 @@
 		B2C58A032882364E0046D55D /* BlankView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlankView.swift; sourceTree = "<group>"; };
 		B2C58A05288246EB0046D55D /* ListRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRowView.swift; sourceTree = "<group>"; };
 		B2C58A07288297C70046D55D /* CheckboxStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckboxStyle.swift; sourceTree = "<group>"; };
+		B2C58A092882E6820046D55D /* SoundPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundPlayer.swift; sourceTree = "<group>"; };
 		B2E99AC4287DA77800DAB27E /* todo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = todo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2E99AC7287DA77800DAB27E /* todoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = todoApp.swift; sourceTree = "<group>"; };
 		B2E99AC9287DA77800DAB27E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -132,6 +134,7 @@
 			isa = PBXGroup;
 			children = (
 				B28FCC9528804F2700063004 /* Constants.swift */,
+				B2C58A092882E6820046D55D /* SoundPlayer.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -244,6 +247,7 @@
 				B2C58A06288246EB0046D55D /* ListRowView.swift in Sources */,
 				B2E99AC8287DA77800DAB27E /* todoApp.swift in Sources */,
 				B2C58A08288297C70046D55D /* CheckboxStyle.swift in Sources */,
+				B2C58A0A2882E6820046D55D /* SoundPlayer.swift in Sources */,
 				B2E99AD4287DA77800DAB27E /* todo.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

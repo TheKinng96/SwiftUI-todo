@@ -52,13 +52,20 @@ struct TaskItemView: View {
         
         Button(action: {
           addItem()
+          playSound(fileName: "sound-ding", type: "mp3")
+          feedback.notificationOccurred(.success)
         }, label: {
           Spacer()
-          Text("save")
+          Text("save".uppercased())
             .font(.system(size: 24, weight: .bold, design: .rounded))
           Spacer()
         })
         .disabled(isButtonDisabled)
+        .onTapGesture {
+          if isButtonDisabled {
+            playSound(fileName: "sound-tap", type: "mp3")
+          }
+        }
         .padding()
         .foregroundColor(.white)
         .background(

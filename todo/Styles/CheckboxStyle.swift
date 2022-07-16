@@ -15,6 +15,13 @@ struct CheckboxStyle: ToggleStyle {
         .font(.system(size: 30, weight: .semibold, design: .rounded))
         .onTapGesture {
           configuration.isOn.toggle()
+          feedback.notificationOccurred(.success)
+          
+          if configuration.isOn {
+            playSound(fileName: "sound-rise", type: "mp3")
+          } else {
+            playSound(fileName: "sound-tap", type: "mp3")
+          }
         }
       
       configuration.label
